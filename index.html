@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Ps</title>
+    <script src="react.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">
+     var Box = React.createClass({
+       respond: function (e) { alert(e.type); },
+       render: function () {
+         return React.DOM.div({onClick: this.respond}, 'Hello world')
+       }
+     });
+
+     window.onload(function () {
+       React.renderComponent(Box(), document.getElementById('outer'));
+     });
+    </script>
+  </head>
+  <body>
+    <div id="outer"></div>
+  </body>
+</html>
